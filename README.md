@@ -20,9 +20,9 @@ Adding a watermark to an image works as a copyright. Different organizations can
 7. Download any image you want and test.
 
 ## Input
-!(input_1) ['images/input1.png']
+!(input_1)['images/input1.png']
 
-!(input_2) ['images/sunset.png']
+!(input_2)['images/sunset.png']
 ## Interface
 
 ## Output
