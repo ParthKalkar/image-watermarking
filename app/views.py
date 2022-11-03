@@ -46,7 +46,7 @@ def index():
 		else:
 			text_mark = request.form['text_mark']
 
-			cv2.putText(image_logow, text='Dog_Comp', org=(w_image - 95, h_image - 10), fontFace=cv2.FONT_HERSHEY_COMPLEX, fontScale=0.5,
+			cv2.putText(image_logow, text=text_mark, org=(w_image - 95, h_image - 10), fontFace=cv2.FONT_HERSHEY_COMPLEX, fontScale=0.5,
 			color=(0,0,255), thickness=2, lineType=cv2.LINE_4);
 			timg = Image.fromarray(image_logow, 'RGB')
 			timg.save(os.path.join(app.config['INITIAL_FILE_UPLOADS'], 'image1.png'))
