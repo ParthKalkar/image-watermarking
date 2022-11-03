@@ -1,18 +1,28 @@
 # image-watermarking
 In this project, we will add a watermark to an image 
 
+## Scope
+Adding a watermark to an image works as a copyright. Different organizations can use it to make their content secure so that their content cannot be misused without their license or a paid version. In this project we saw how easily we can use OpenCV to add watermarks to our images. 
+
+## Technology
+1. Python
+2. OpenCV
+3. Requests
+4. PIL
 
 ## Run
-Step 1:	Create the copy of the project.
-Step 2: Open command prompt and change your current path 
-to folder where you can find 'app.py' file.
-Step 3: Create environment by command given below-
-conda create -name <environment name>
-Step 4: Activate environment by command as follows-
-conda activate <environment name>
-Step 5: Use command below to install required dependencies-
-python -m pip install -r requirements.txt
-Step 6: Run application by command;
-python app.py
-You will get url copy it and paste in browser.
-Step 7: You have sample_data folder where you can get images to test.
+1. Create the copy of the project.
+2. Open command prompt and change your current path to folder where you can find `app.py` file.
+3. Create environment by command given below - `$ conda create -name <environment name>`
+4. Activate environment by command as follows-`$ conda activate <environment name>`
+5. Use command below to install required dependencies - `$ python -m pip install -r requirements.txt`
+6. Run application by command - `$ python app.py` You will get url copy it and paste in browser.
+7. Download any image you want and test.
+
+## Input
+
+## Interface
+
+## Output
+
+
