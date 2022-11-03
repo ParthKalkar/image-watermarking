@@ -2,8 +2,6 @@
 from app import app
 from flask import request, render_template, redirect, url_for
 import os
-from skimage.metrics import structural_similarity
-import imutils
 import cv2
 import numpy as np
 from PIL import Image
@@ -15,11 +13,6 @@ app.config['INITIAL_FILE_UPLOADS'] = 'app/static/uploads'
 @app.route("/", methods=["GET", "POST"])
 def index():
 
-	# Execute if request is get
-	if request.method == "GET":
-	    return render_template("index.html")
-
-	# Execute if reuqest is post
 	if request.method == "POST":
 		option = request.form['options']
 		image_upload = request.files['image_upload']
@@ -27,7 +20,7 @@ def index():
 		image = Image.open(image_upload)
 		image_logow = np.array(image.convert('RGB'))
 		h_image, w_image, _ = image_logow.shape
-		
+
 		if option == 'logo_watermark':
 			logo_upload = request.files['logo_upload']
 			logoname = logo_upload.filename
@@ -50,17 +43,21 @@ def index():
 			img = Image.fromarray(image_logow, 'RGB')
 			img.save(os.path.join(app.config['INITIAL_FILE_UPLOADS'], 'image.png'))
 			full_filename =  'static/uploads/image.png'
-			return render_template('index.html', full_filename = full_filename)
-
 		else:
 			text_mark = request.form['text_mark']
 
-			cv2.putText(image_logow, text='Pianalytix', org=(w_image - 95, h_image - 10), fontFace=cv2.FONT_HERSHEY_COMPLEX, fontScale=0.5,
-            color=(0,0,255), thickness=2, lineType=cv2.LINE_4); 
+			cv2.putText(image_logow, text='Dog_Comp', org=(w_image - 95, h_image - 10), fontFace=cv2.FONT_HERSHEY_COMPLEX, fontScale=0.5,
+			color=(0,0,255), thickness=2, lineType=cv2.LINE_4);
 			timg = Image.fromarray(image_logow, 'RGB')
 			timg.save(os.path.join(app.config['INITIAL_FILE_UPLOADS'], 'image1.png'))
 			full_filename =  'static/uploads/image1.png'
-			return render_template('index.html', full_filename = full_filename)
+		return render_template('index.html', full_filename = full_filename)
+
+	# Execute if request is get
+	if request.method == "GET":
+	    return render_template("index.html")
+		
+	
 
        
 # Main function
