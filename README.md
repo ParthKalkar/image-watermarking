@@ -1,5 +1,5 @@
 # image-watermarking
-In this project, we will add a watermark to an image 
+In this project, we will see how we can add a watermark to an image. Adding a watermark works as a copyright for your image, so that no one can illegally use your image or document. 
 
 ## Scope
 Adding a watermark to an image works as a copyright. Different organizations can use it to make their content secure so that their content cannot be misused without their license or a paid version. In this project we saw how easily we can use OpenCV to add watermarks to our images. 
@@ -21,7 +21,7 @@ Adding a watermark to an image works as a copyright. Different organizations can
 
 ## Input
 
-![input_1](images/input1.png)
+![input_1](images/input_1.png)
 
 ![input_2](images/sunset.png)
 
